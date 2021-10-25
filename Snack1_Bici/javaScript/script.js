@@ -35,6 +35,7 @@ let arrayBici =
 
 let arrayPeso = [];
 
+
 for (let i = 0; i < arrayBici.length; i++) {
 
     let bici = arrayBici[i];
@@ -45,20 +46,45 @@ for (let i = 0; i < arrayBici.length; i++) {
 
     arrayPeso.push(peso);
 
+    /* if (arrayBici[i] === arrayPeso[0]) {
+        console.log(arrayBici[i]);
+    } */
+
+    let biciLeggera = bici.includes(peso === Math.min(...arrayPeso));
+    console.log(biciLeggera);
 }
 
+console.log(Math.min(...arrayPeso));;
 
-console.log(arrayPeso);
-//arrayPeso.sort();
-//console.log(arrayPeso.sort());
 
-arrayPeso.sort(function (a, b) {
-    return a - b;
-});
-console.log(arrayPeso);
 
-for (let j = 0; j < arrayPeso.length; j++) {
+
+/* for (let j = 0; j < arrayPeso.length; j++) {
     let biciPeso = arrayPeso[j];
     console.log(biciPeso);
 
 }
+ */
+
+
+
+//console.log(arrayPeso);
+//arrayPeso.sort();
+//console.log(arrayPeso.sort());
+
+
+/* arrayPeso.sort(function (a, b) {
+    return a - b;
+});
+console.log(arrayPeso);
+ */
+
+
+
+
+
+
+
+
+
+
