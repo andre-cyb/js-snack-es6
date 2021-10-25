@@ -48,7 +48,9 @@ for (let i = 0; i < arrayBici.length; i++) {
 
     arrayPeso.push(peso);
 
-    if () {
+
+    /* let biciLeggera = ""; */
+    if (peso === Math.min(...arrayPeso)) {
 
         let codiceBici = `<div>
                              <ul>
@@ -56,7 +58,8 @@ for (let i = 0; i < arrayBici.length; i++) {
                                  <li>nome: ${nome}</li>
                                  <li>peso: ${peso}</li>
                              </ul>
-                         </div>  `;
+                         </div> `;
+
         container.innerHTML += codiceBici;
     }
 }
@@ -85,7 +88,6 @@ console.log(Math.min(...arrayPeso));;
 });
 console.log(arrayPeso);
  */
-
 
 
 
