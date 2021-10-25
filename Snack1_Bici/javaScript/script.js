@@ -34,6 +34,8 @@ let arrayBici =
 
 
 let arrayPeso = [];
+let container = document.querySelector(".container");
+console.log(container);
 
 
 for (let i = 0; i < arrayBici.length; i++) {
@@ -41,17 +43,22 @@ for (let i = 0; i < arrayBici.length; i++) {
     let bici = arrayBici[i];
     console.log(bici);
 
-    const { nome, peso } = arrayBici[i];
+    const { nome, peso } = bici;
     console.log(nome, peso);
 
     arrayPeso.push(peso);
 
-    /* if (arrayBici[i] === arrayPeso[0]) {
-        console.log(arrayBici[i]);
-    } */
+    if () {
 
-    let biciLeggera = bici.includes(peso === Math.min(...arrayPeso));
-    console.log(biciLeggera);
+        let codiceBici = `<div>
+                             <ul>
+                                 <li><h3>Bici</h3></li>
+                                 <li>nome: ${nome}</li>
+                                 <li>peso: ${peso}</li>
+                             </ul>
+                         </div>  `;
+        container.innerHTML += codiceBici;
+    }
 }
 
 console.log(Math.min(...arrayPeso));;
