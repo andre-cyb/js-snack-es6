@@ -39,7 +39,6 @@ console.log(container);
 
 
 
-
 let biciLeggera = arrayBici[0].peso;
 
 
@@ -67,15 +66,6 @@ for (let i = 0; i < arrayBici.length; i++) {
     }
 
 }
-
-
-
-
-
-
-
-
-
 
 
 
