@@ -37,9 +37,8 @@ let container = document.querySelector(".container");
 console.log(container);
 
 
-
-
-let biciLeggera = arrayBici[0].peso;
+let nuovoArray = [...arrayBici];
+console.log(arrayBici);
 
 
 for (let i = 0; i < arrayBici.length; i++) {
@@ -50,22 +49,22 @@ for (let i = 0; i < arrayBici.length; i++) {
     const { nome, peso } = bici;
     console.log(nome, peso);
 
-
-
-    if (peso < biciLeggera) {
-        biciLeggera = bici;
-        let codiceBici = `<div>
-                             <ul>
-                                 <li><h3>Bici</h3></li>
-                                 <li>nome: ${nome}</li>
-                                 <li>peso: ${peso} kg</li>
-                             </ul>
-                         </div> `;
-
-        container.innerHTML += codiceBici;
-    }
+    nuovoArray.sort((a, b) => a.peso - b.peso);
 
 }
+
+let biciLeggera = nuovoArray[0];
+console.log(biciLeggera);
+
+let codiceBici = `  <div>
+                        <ul>
+                            <li><h3>Bici</h3></li>
+                            <li>nome: ${biciLeggera.nome}</li>
+                            <li>peso: ${biciLeggera.peso} kg</li>
+                        </ul>
+                    </div> `;
+
+container.innerHTML += codiceBici;
 
 
 
